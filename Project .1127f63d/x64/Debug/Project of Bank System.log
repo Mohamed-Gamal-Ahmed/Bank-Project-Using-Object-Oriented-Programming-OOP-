@@ -1,0 +1,43 @@
+﻿  clsCurrencyExchangeMainScreen.cpp
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsString.h(39,25): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsString.h(44,29): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsString.h(56,30): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsString.h(193,29): warning C4267: 'return': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsString.h(324,30): warning C4267: '=': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsString.h(372,22): warning C4267: 'initializing': conversion from 'size_t' to 'short', possible loss of data
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsUtil.h(64,5): warning C4102: 'defualt': unreferenced label
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsUser.h(198,12): warning C4240: nonstandard extension used: access to 'clsUser::stLoginRegisterRecord' now defined to be 'public', previously it was defined to be 'private'
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsUser.h(26,12):
+  see declaration of 'clsUser::stLoginRegisterRecord'
+  
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsInputValidate.h(112,16): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsInputValidate.h(116,26): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsCurrency.h(27,17): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsUpdateCurrencyRateScreen.h(17,52): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  
+C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\clsCurrencyCalculatorScreen.h(17,51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  (compiling source file 'clsCurrencyExchangeMainScreen.cpp')
+  
+  Project of Bank System.vcxproj -> C:\Users\Moon Light\Desktop\OOP project\Project of Bank System\x64\Debug\Project of Bank System.exe
