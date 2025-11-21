@@ -1,0 +1,54 @@
+## Ignore Visual Studio temporary files and build results
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Mono Auto Generated Files
+mono_crash.*
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio 2022 project-level cache
+.vs/
+
+# .NET Core
+*.deps.json
+*.runtimeconfig.json
+*.dll
+*.exe
+*.pdb
+
+# NuGet
+*.nupkg
+*/packages/*
+!*/packages/build/
+!*/packages/repositories.config
+
+# Node.js
+node_modules/
+
+# Other
+*.log
+*.tmp
+*.cache
+
+# Publish
+publish/
