@@ -50,7 +50,7 @@ public:
         {
             string CurrencyCode;
             cout << "\nPlease Enter CurrencyCode: ";
-            CurrencyCode = clsInputValidate::ReadString();
+            CurrencyCode = clsInputValidate<string>::ReadString();
             clsCurrency Currency = clsCurrency::FindByCode(CurrencyCode);
             _ShowResults(Currency);
         }
@@ -58,7 +58,7 @@ public:
         {
             string Country;
             cout << "\nPlease Enter Country Name: ";
-            Country = clsInputValidate::ReadString();
+            Country = clsInputValidate<string>::ReadString();
             clsCurrency Currency = clsCurrency::FindByCountry(Country);
             _ShowResults(Currency);
         }

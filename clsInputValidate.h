@@ -24,12 +24,12 @@ public:
 
 	static T ReadNumberBetween(T From, T To, string ErrorMessage = "Number is not within range, Enter again:\n")
 	{
-		T Number = ReadShortNumber();
+		T Number = ReadNumber();
 
 		while (!IsNumberBetween(Number, From, To))
 		{
 			cout << ErrorMessage;
-			Number = ReadShortNumber();
+			Number = ReadNumber();
 		}
 		return Number;
 	}
@@ -45,7 +45,6 @@ public:
 
 	static bool IsDateBetween(clsDate Date, clsDate From, clsDate To)
 	{
-		//Date>=From && Date<=To
 		if ((clsDate::IsDate1AfterDate2(Date, From) || clsDate::IsDate1EqualDate2(Date, From))
 			&&
 			(clsDate::IsDate1BeforeDate2(Date, To) || clsDate::IsDate1EqualDate2(Date, To))
@@ -54,7 +53,6 @@ public:
 			return true;
 		}
 
-		//Date>=To && Date<=From
 		if ((clsDate::IsDate1AfterDate2(Date, To) || clsDate::IsDate1EqualDate2(Date, To))
 			&&
 			(clsDate::IsDate1BeforeDate2(Date, From) || clsDate::IsDate1EqualDate2(Date, From))
@@ -74,7 +72,6 @@ public:
 	static string ReadString()
 	{
 		string  S1 = "";
-		// Usage of std::ws will extract allthe whitespace character
 		getline(cin >> ws, S1);
 		return S1;
 	}

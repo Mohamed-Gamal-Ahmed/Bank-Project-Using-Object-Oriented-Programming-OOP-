@@ -28,7 +28,7 @@ public:
 
         if (!CheckAccessRights(clsUser::enPermissions::pListClients))
         {
-            return;// this will exit the function and it will not continue
+            return;
         }
 
         vector <clsBankClient> vClients = clsBankClient::GetClientsList();

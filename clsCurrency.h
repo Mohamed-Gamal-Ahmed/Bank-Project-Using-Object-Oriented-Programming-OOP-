@@ -47,7 +47,7 @@ private:
         vector <clsCurrency> vCurrencys;
 
         fstream MyFile;
-        MyFile.open("Currencies.txt", ios::in);//read Mode
+        MyFile.open("Currencies.txt", ios::in);
 
         if (MyFile.is_open())
         {
@@ -74,7 +74,7 @@ private:
     {
 
         fstream MyFile;
-        MyFile.open("Currencies.txt", ios::out);//overwrite
+        MyFile.open("Currencies.txt", ios::out);
 
         string DataLine;
 
@@ -176,7 +176,7 @@ public:
         CurrencyCode = clsString::UpperAllString(CurrencyCode);
 
         fstream MyFile;
-        MyFile.open("Currencies.txt", ios::in);//read Mode
+        MyFile.open("Currencies.txt", ios::in);
 
         if (MyFile.is_open())
         {
@@ -204,7 +204,7 @@ public:
         Country = clsString::UpperAllString(Country);
 
         fstream MyFile;
-        MyFile.open("Currencies.txt", ios::in);//read Mode
+        MyFile.open("Currencies.txt", ios::in);
 
         if (MyFile.is_open())
         {

@@ -26,43 +26,35 @@ private:
     static short ReadTransactionsMenueOption()
     {
         cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 6]? ";
-        short Choice = clsInputValidate::ReadShortNumberBetween(1, 6, "Enter Number between 1 to 6? ");
+        short Choice = clsInputValidate<short>::ReadNumberBetween(1, 6, "Enter Number between 1 to 6? ");
         return Choice;
     }
 
 
     static void _ShowDepositScreen()
     {
-        //cout << "\n Deposit Screen will be here.\n";
         clsDepositScreen::ShowDepositScreen();
     }
 
     static void _ShowWithdrawScreen()
     {
-        //cout << "\n Withdraw Screen will be here.\n";
         clsWithdrawScreen::ShowWithdrawScreen();
     }
 
     static void _ShowTotalBalancesScreen()
     {
-        // cout << "\n Balances Screen will be here.\n";
         clsTotalBalancesScreen::ShowTotalBalances();
 
     }
 
     static void _ShowTransferScreen()
     {
-        //cout << "\n Transfer Screen will be here.\n";
         clsTransferScreen::ShowTransferScreen();
-
-
     }
 
     static void _ShowTransferLogScreen()
     {
-        //cout << "\n Transfer Screen will be here.\n";
         clsTransferLogScreen::ShowTransferLogScreen();
-
     }
 
     static void _GoBackToTransactionsMenue()
@@ -140,7 +132,7 @@ public:
 
         if (!CheckAccessRights(clsUser::enPermissions::pTranactions))
         {
-            return;// this will exit the function and it will not continue
+            return;
         }
 
         system("cls");

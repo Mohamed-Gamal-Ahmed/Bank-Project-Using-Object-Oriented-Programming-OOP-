@@ -20,7 +20,7 @@ private:
         cout << "\nEmail       : " << Client.Email;
         cout << "\nPhone       : " << Client.Phone;
         cout << "\nAcc. Number : " << Client.AccountNumber();
-        cout << "\nPassword    : " << Client.PinCode;
+        cout << "\nPinCode    : " << Client.PinCode;
         cout << "\nBalance     : " << Client.AccountBalance;
         cout << "\n___________________\n";
 
@@ -29,22 +29,22 @@ private:
     static void ReadClientInfo(clsBankClient& Client)
     {
         cout << "\nEnter FirstName: ";
-        Client.FirstName = clsInputValidate::ReadString();
+        Client.FirstName = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter LastName: ";
-        Client.LastName = clsInputValidate::ReadString();
+        Client.LastName = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter Email: ";
-        Client.Email = clsInputValidate::ReadString();
+        Client.Email = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter Phone: ";
-        Client.Phone = clsInputValidate::ReadString();
+        Client.Phone = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter PinCode: ";
-        Client.PinCode = clsInputValidate::ReadString();
+        Client.PinCode = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter Account Balance: ";
-        Client.AccountBalance = clsInputValidate::ReadFloatNumber();
+        Client.AccountBalance = clsInputValidate<float>::ReadNumber();
     }
 
 public:
@@ -53,7 +53,7 @@ public:
     {
         if (!CheckAccessRights(clsUser::enPermissions::pUpdateClients))
         {
-            return;// this will exit the function and it will not continue
+            return;
         }
 
         _DrawScreenHeader("\tUpdate Client Screen");
@@ -61,12 +61,12 @@ public:
         string AccountNumber = "";
 
         cout << "\nPlease Enter client Account Number: ";
-        AccountNumber = clsInputValidate::ReadString();
+        AccountNumber = clsInputValidate<string>::ReadString();
 
         while (!clsBankClient::IsClientExist(AccountNumber))
         {
             cout << "\nAccount number is not found, choose another one: ";
-            AccountNumber = clsInputValidate::ReadString();
+            AccountNumber = clsInputValidate<string>::ReadString();
         }
 
         clsBankClient Client1 = clsBankClient::Find(AccountNumber);

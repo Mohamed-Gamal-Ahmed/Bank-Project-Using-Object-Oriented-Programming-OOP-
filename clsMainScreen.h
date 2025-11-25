@@ -29,7 +29,7 @@ private:
     static short _ReadMainMenueOption()
     {
         cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 10]? ";
-        short Choice = clsInputValidate::ReadShortNumberBetween(1, 9, "Enter Number between 1 to 10? ");
+        short Choice = clsInputValidate<short>::ReadNumberBetween(1, 9, "Enter Number between 1 to 10? ");
         return Choice;
     }
 
@@ -68,7 +68,7 @@ private:
 
     static void _ShowTransactionsMenue()
     {
-        clsTransactionsScreen::ShowTransactionsMenue();
+        clsTransactionsScreen::ShowTransactionsMenue();   
     }
 
     static void _ShowManageUsersMenue()

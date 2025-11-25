@@ -14,19 +14,19 @@ private:
     static void _ReadUserInfo(clsUser& User)
     {
         cout << "\nEnter FirstName: ";
-        User.FirstName = clsInputValidate::ReadString();
+        User.FirstName = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter LastName: ";
-        User.LastName = clsInputValidate::ReadString();
+        User.LastName = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter Email: ";
-        User.Email = clsInputValidate::ReadString();
+        User.Email = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter Phone: ";
-        User.Phone = clsInputValidate::ReadString();
+        User.Phone = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter Password: ";
-        User.Password = clsInputValidate::ReadString();
+        User.Password = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter Permission: ";
         User.Permissions = _ReadPermissionsToSet();
@@ -135,12 +135,12 @@ public:
         string UserName = "";
 
         cout << "\nPlease Enter User UserName: ";
-        UserName = clsInputValidate::ReadString();
+        UserName = clsInputValidate<string>::ReadString();
 
         while (!clsUser::IsUserExist(UserName))
         {
             cout << "\nAccount number is not found, choose another one: ";
-            UserName = clsInputValidate::ReadString();
+            UserName = clsInputValidate<string>::ReadString();
         }
 
         clsUser User1 = clsUser::Find(UserName);

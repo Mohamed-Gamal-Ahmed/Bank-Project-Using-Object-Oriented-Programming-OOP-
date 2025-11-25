@@ -23,7 +23,7 @@ private:
     static short ReadManageUsersMenueOption()
     {
         cout << setw(37) << left << "" << "Choose what do you want to do? [1 to 6]? ";
-        short Choice = clsInputValidate::ReadShortNumberBetween(1, 6, "Enter Number between 1 to 6? ");
+        short Choice = clsInputValidate<short>::ReadNumberBetween(1, 6, "Enter Number between 1 to 6? ");
         return Choice;
     }
 
@@ -36,34 +36,26 @@ private:
 
     static void _ShowListUsersScreen()
     {
-        //cout << "\nList Users Screen Will Be Here.\n";
         clsListUsersScreen::ShowUsersList();
-
     }
 
     static void _ShowAddNewUserScreen()
     {
-        // cout << "\nAdd New User Screen Will Be Here.\n";
         clsAddNewUserScreen::ShowAddNewUserScreen();
-
     }
 
     static void _ShowDeleteUserScreen()
     {
-        // cout << "\nDelete User Screen Will Be Here.\n";
         clsDeleteUserScreen::ShowDeleteUserScreen();
-
     }
 
     static void _ShowUpdateUserScreen()
     {
-        // cout << "\nUpdate User Screen Will Be Here.\n";
         clsUpdateUserScreen::ShowUpdateUserScreen();
     }
 
     static void _ShowFindUserScreen()
     {
-        //cout << "\nFind User Screen Will Be Here.\n";
         clsFindUserScreen::ShowFindUserScreen();
     }
 
@@ -128,7 +120,7 @@ public:
 
         if (!CheckAccessRights(clsUser::enPermissions::pManageUsers))
         {
-            return;// this will exit the function and it will not continue
+            return;
         }
 
         system("cls");

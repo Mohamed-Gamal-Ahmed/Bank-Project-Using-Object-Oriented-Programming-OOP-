@@ -31,18 +31,18 @@ public:
     {
         if (!CheckAccessRights(clsUser::enPermissions::pFindClient))
         {
-            return;// this will exit the function and it will not continue
+            return;
         }
 
         _DrawScreenHeader("\tFind Client Screen");
 
         string AccountNumber;
         cout << "\nPlease Enter Account Number: ";
-        AccountNumber = clsInputValidate::ReadString();
+        AccountNumber = clsInputValidate<string>::ReadString();
         while (!clsBankClient::IsClientExist(AccountNumber))
         {
             cout << "\nAccount number is not found, choose another one: ";
-            AccountNumber = clsInputValidate::ReadString();
+            AccountNumber = clsInputValidate<string>::ReadString();
         }
 
         clsBankClient Client1 = clsBankClient::Find(AccountNumber);

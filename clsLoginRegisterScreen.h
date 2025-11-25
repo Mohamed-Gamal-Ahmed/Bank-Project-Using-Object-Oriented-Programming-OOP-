@@ -27,7 +27,7 @@ public:
     {
         if (!CheckAccessRights(clsUser::enPermissions::pShowLogInRegister))
         {
-            return;// this will exit the function and it will not continue
+            return;
         }
 
         vector <clsUser::stLoginRegisterRecord> vLoginRegisterRecord = clsUser::GetLoginRegisterList();

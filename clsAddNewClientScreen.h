@@ -12,22 +12,22 @@ private:
     static void _ReadClientInfo(clsBankClient& Client)
     {
         cout << "\nEnter FirstName: ";
-        Client.FirstName = clsInputValidate::ReadString();
+        Client.FirstName = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter LastName: ";
-        Client.LastName = clsInputValidate::ReadString();
+        Client.LastName = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter Email: ";
-        Client.Email = clsInputValidate::ReadString();
+        Client.Email = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter Phone: ";
-        Client.Phone = clsInputValidate::ReadString();
+        Client.Phone = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter PinCode: ";
-        Client.PinCode = clsInputValidate::ReadString();
+        Client.PinCode = clsInputValidate<string>::ReadString();
 
         cout << "\nEnter Account Balance: ";
-        Client.AccountBalance = clsInputValidate::ReadFloatNumber();
+        Client.AccountBalance = clsInputValidate<float>::ReadNumber();
     }
 
     static void _PrintClient(clsBankClient Client)
@@ -52,7 +52,7 @@ public:
     {
         if (!CheckAccessRights(clsUser::enPermissions::pAddNewClient))
         {
-            return;// this will exit the function and it will not continue
+            return;
         }
 
 
@@ -61,11 +61,11 @@ public:
         string AccountNumber = "";
 
         cout << "\nPlease Enter Account Number: ";
-        AccountNumber = clsInputValidate::ReadString();
+        AccountNumber = clsInputValidate<string>::ReadString();
         while (clsBankClient::IsClientExist(AccountNumber))
         {
             cout << "\nAccount Number Is Already Used, Choose another one: ";
-            AccountNumber = clsInputValidate::ReadString();
+            AccountNumber = clsInputValidate<string>::ReadString();
         }
 
         clsBankClient NewClient = clsBankClient::GetAddNewClientObject(AccountNumber);

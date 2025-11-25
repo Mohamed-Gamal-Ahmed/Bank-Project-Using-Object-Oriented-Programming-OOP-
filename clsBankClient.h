@@ -80,7 +80,7 @@ private:
     {
 
         fstream MyFile;
-        MyFile.open("Clients.txt", ios::out);//overwrite
+        MyFile.open("Clients.txt", ios::out);
 
         string DataLine;
 
@@ -91,10 +91,8 @@ private:
             {
                 if (C.MarkedForDeleted() == false)
                 {
-                    //we only write records that are not marked for delete.  
                     DataLine = _ConverClientObjectToLine(C);
                     MyFile << DataLine << endl;
-
                 }
 
             }
