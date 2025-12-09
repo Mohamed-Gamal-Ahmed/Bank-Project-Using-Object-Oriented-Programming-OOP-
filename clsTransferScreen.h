@@ -20,10 +20,10 @@ private:
 
     }
 
-    static string _ReadAccountNumber()
+    static string _ReadAccountNumber(string Dir)
     {
         string AccountNumber;
-        cout << "\nPlease Enter Account Number to Transfer From: ";
+        cout << "\nPlease Enter Account Number to Transfer " << Dir<< ": ";
         AccountNumber = clsInputValidate<string>::ReadString();
         while (!clsBankClient::IsClientExist(AccountNumber))
         {
@@ -56,11 +56,11 @@ public:
 
         _DrawScreenHeader("\tTransfer Screen");
 
-        clsBankClient SourceClient = clsBankClient::Find(_ReadAccountNumber());
+        clsBankClient SourceClient = clsBankClient::Find(_ReadAccountNumber("From"));
 
         _PrintClient(SourceClient);
 
-        clsBankClient DestinationClient = clsBankClient::Find(_ReadAccountNumber());
+        clsBankClient DestinationClient = clsBankClient::Find(_ReadAccountNumber("To"));
 
         _PrintClient(DestinationClient);
 
